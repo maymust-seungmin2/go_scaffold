@@ -21,6 +21,7 @@ Validation:    Protovalidate
 Auth/IAM:      Keycloak + go-oidc
 Testing:       testing + testify + testcontainers-go
 Load Test:     vegeta
+Task Runner:   Taskfile
 Lint:          golangci-lint
 Security:      govulncheck
 ```
