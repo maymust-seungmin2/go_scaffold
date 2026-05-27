@@ -1,0 +1,25 @@
+git
+.direnv
+.env
+.env.*
+!.env.example
+
+# Go build/test artifacts
+*.test
+*.out
+coverage.*
+*.coverprofile
+profile.cov
+
+# Local/editor files
+.DS_Store
+.idea
+.vscode
+
+# Build outputs
+dist
+build
+tmp
+
+# Dependency/cache directories
+vendor

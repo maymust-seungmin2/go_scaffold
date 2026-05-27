@@ -27,20 +27,32 @@
             go
 
             # Go development tools.
+            go-task
             sqlc
             go-migrate-postgres
             golangci-lint
             govulncheck
-            go-swag
+
+            # Protobuf / ConnectRPC code generation tools.
+            buf
+            protoc-gen-go
+            protoc-gen-connect-go
+
+            # Load test tools.
+            vegeta
           ];
 
           shellHook = ''
             echo "go: $(go version)"
+            echo "task: $(task --version)"
             echo "sqlc: $(sqlc version)"
             echo "migrate: $(migrate -version 2>&1 | head -n 1)"
             echo "golangci-lint: $(golangci-lint --version | head -n 1)"
             echo "govulncheck: $(govulncheck -version 2>&1 | head -n 1)"
-            echo "swag: $(swag --version)"
+            echo "buf: $(buf --version)"
+            echo "protoc-gen-go: $(protoc-gen-go --version)"
+            echo "protoc-gen-connect-go: $(protoc-gen-connect-go --version)"
+            echo "vegeta: $(vegeta --version 2>&1 | head -n 1)"
             echo ""
           '';
         };
